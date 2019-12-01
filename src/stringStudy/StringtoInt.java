@@ -4,7 +4,7 @@ public class StringtoInt {
 
 	
 	public static void main(String[] args) {
-		String inp = "                  -42";
+		String inp = "                  213978";
 		System.out.println(myAtoi(inp));
 	}
 	public static int myAtoi(String str) {
@@ -13,13 +13,12 @@ public class StringtoInt {
         
         for(int i = 0; i < str.length(); i++){
         	if(Character.isDigit(str.charAt(i))){
-            	num = num * 10;
-            	num = num + Character.getNumericValue(str.charAt(i));
+            	num = num * 10 + Character.getNumericValue(str.charAt(i));
         	}
         }
         
         if(isNegative){
-        	num = num * -1;
+        	num *= -1;
         }
         return num;
     }
