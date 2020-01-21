@@ -19,8 +19,6 @@ public class MergeIntervalsOfMeeting {
 	}
 
 	private static int[][] mergeIntervals(int[][] meetings) {
-		
-		
 		List<Interval> meetingIntervals = new ArrayList<Interval>();
 		for(int[] meeting : meetings){
 			meetingIntervals.add(new Interval(meeting[0], meeting[1]));

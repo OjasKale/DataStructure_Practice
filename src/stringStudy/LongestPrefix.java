@@ -21,7 +21,8 @@ public class LongestPrefix {
 		st.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 		st.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 		st.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-		System.out.println(longestCommonPrefix(st));
+		//System.out.println(longestCommonPrefix(st));
+		System.out.println(longestPrefix(st));
 		
 		
 	}
@@ -47,5 +48,16 @@ public class LongestPrefix {
         
         return sb.toString();
     }
-
+	public static String longestPrefix(ArrayList<String> strs){
+		StringBuilder prefix = new StringBuilder(strs.get(0));
+        for(String st: strs){
+            int i = 0;
+            while(i < st.length() && i < prefix.length() && prefix.charAt(i) == st.charAt(i)){
+                i++;
+            }
+            prefix.delete(i,prefix.length());
+        }
+        
+        return prefix.toString();
+	}
 }

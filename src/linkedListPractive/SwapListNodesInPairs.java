@@ -21,7 +21,7 @@ public class SwapListNodesInPairs {
 	public static ListNode<Integer> swapPairs(ListNode<Integer> A) throws Exception{
 		ListNode<Integer> prev = A;
         ListNode<Integer> curr = A.next;
-        
+        ListNode<Integer> next = curr.next;
         if(curr == null){
             return A;
         }

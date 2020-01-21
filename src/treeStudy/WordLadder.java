@@ -21,7 +21,7 @@ public class WordLadder {
 		st.add("lot");
 		st.add("log");
 		st.add("cog");
-		String start = "hot";
+		String start = "hit";
 		String end = "dog";
 		
 		int res = ladderLength(start,end,st);
